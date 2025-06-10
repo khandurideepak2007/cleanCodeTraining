@@ -11,3 +11,31 @@ public class NameSearch {
         }
     }
 }
+
+
+// Testable Code
+
+public class NameSearcher {
+
+    // Method to find names starting with a given prefix
+    public List<String> searchNamesStartingWith(String[] names, String prefix) {
+        List<String> matchedNames = new ArrayList<>();
+        if (names == null || prefix == null) return matchedNames;
+
+        for (String name : names) {
+            if (name != null && name.startsWith(prefix)) {
+                matchedNames.add(name);
+            }
+        }
+        return matchedNames;
+    }
+
+    // Optional main method for manual testing
+    public static void main(String[] args) {
+        NameSearcher searcher = new NameSearcher();
+        String[] names = {"Deepak", "Vishnu", "Alpha", "Beta", "Ben", "Berry"};
+
+        List<String> results = searcher.searchNamesStartingWith(names, "Be");
+        results.forEach(System.out::println);
+    }
+}
