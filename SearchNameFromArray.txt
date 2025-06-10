@@ -1,0 +1,13 @@
+public class NameSearch {
+    public static void main(String[] args) {
+        String[] names = {"Deepak", "Vishnu", "Alpha", "Beta", "Ben", "Berry"};
+
+        String searchPrefix = "Be";
+
+        for (String name : names) {
+            if (name.startsWith(searchPrefix)) {
+                System.out.println("Match found: " + name);
+            }
+        }
+    }
+}
